@@ -1,0 +1,113 @@
+
+public class Deletions
+{
+	private int[] myArray;
+	private int numMoves;
+	
+	
+	/**
+	 * Instantiate myArray to a new array.
+	 * Copy all data from int[] data to myArray.
+	 * Set numMoves equal to 0.
+	 * @param data Array holding the values input from the user.
+	 */
+	public Deletions(int[] data)
+	{
+		myArray = new int[data.length];
+		for (int pos=0; pos<myArray.length; pos++)
+		{
+			myArray[pos] = data[pos];
+		}
+		numMoves = 0;
+	}
+	
+	
+	
+	/**
+	 * Getter method to find the length of myArray
+	 * @return Length of myArray
+	 */
+	public int getArrayLength()
+	{	
+		return myArray.length;
+	}
+
+	
+	
+	/**
+	 * Getter method returning the value of numMoves
+	 * @return Value of numMoves
+	 */
+	public int getNumMoves()
+	{
+		return numMoves;
+	}
+	
+	
+	
+	/**
+	 * Corresponds with Step #1 in the problem description.
+	 * Removes all zeros from the array and all digits to their left.
+	 * Modifies myArray to be an array of the remaining values.
+	 * @return true if at least one zero was deleted, false otherwise.
+	 */
+	public boolean deleteZeros()
+	{
+		int[] temp = new int[myArray.length];
+		
+		for(int pos = 0; pos < temp.length; pos++)
+		{
+			if (temp[pos] == 0)
+			{
+				myArray =  temp;
+				return true;
+			}
+			else
+			{
+				myArray = temp;
+				return false;
+			}
+		}
+	}
+	
+	
+	
+	/**
+	 * Corresponds with Step #2 in the problem description.
+	 * Finds the largest remaining digit in myArray (rightmost if more than one of the same)
+	 * and subtracts 2 from it if even, 1 if odd.
+	 * @return true if a digit was found and decreased, false if not.
+	 */
+	public boolean decreaseDigit()
+	{
+		//Complete the body of this method and correct the return statement.
+		return false;
+	}
+
+	
+	
+	/**
+	 * Returns a String to represent the current state of deletions.
+	 * The String should contain the following information:
+	 * 		Move number (or "Initial State" if no moves yet)
+	 * 		All values currently in the array.
+	 * 		If the array is empty, print "EMPTY".
+	 * For example:
+	 * 		"Initial state: 3 5 8 0 2 5 4 "
+	 * 		"Move #6: EMPTY"
+	 * 	Refer to the problem description for additional examples in the sample output.
+	 */
+	public String toString()
+	{
+		//Complete the body of this method and correct the return statement.
+		String output = "";
+		
+		for(int pos = 0; pos < myArray.length; pos++)
+		{
+			output += myArray[pos] + " ";
+		}
+		
+		return output;
+	}
+	
+}
