@@ -1,0 +1,54 @@
+package helloWorld;
+
+public class HelloWorld {
+	
+public static void main (String[]args){
+	
+	String noun1="nut";
+	String adj1="old";
+	String noun2="carrot";
+	String adj2="wrinkly";
+	String noun3="banana";
+	String verb1="trip";
+	String verb7="destory";
+	String food1="potatoes"; // Plural
+	String adj4="stalker";
+	String noun4="squid";
+	String verb2="eat";
+	String noun5="rock";
+	String verb3="married";//past tense
+	String verb4="ate"; //Past tense
+	String verb5="exploded";//Past tense
+	String time1="45687945341";//#
+	String name="ZACK";
+	String exclimation1="\"HUEHUWLJRFODSJFEOWF!\"";
+	String verb6="slapped"; //past tense (Lethal verb!)
+	String weapon1="Sharpened Spoon";//Can be anything...
+	String material1="silk";
+	String noun1plural="trees";
+	
+	
+	
+	
+	
+	
+	
+	
+System.out.println("The " +noun1+" Tale");
+System.out.println("Once apon a time in a " +adj1+" " +noun2+" there was a "+noun1+" named "+name+" who lived in a " +adj2+" " +noun3);
+System.out.println("Everday "+name+" Would "+verb1+" to town in order to " +verb7+ " Some " +food1);
+System.out.println("One day on his/her trip to town, " +name +" was given a quest from the " +adj4+" " +noun4);
+System.out.println("This quest entailed " +name +" To " +verb2 +" a " +noun5);
+System.out.println(name +" "+verb3 +" to complete his quest, and when he got there. He met the " +noun5 +"and yelled " +exclimation1+ " before running away in fear.");
+System.out.println("When " +name +" finally arrived home, he/she " +verb4+ " The door and " +verb5+ " for " +time1 +" hours until he/she finally fell asleep.");
+System.out.println("The next morning,"+name+" went back to the "+adj4+" "+noun4+" To admit his/her failure,but he/she could not be found.");
+System.out.println("Searching high and low, "+name+"looked for the "+adj4+" "+noun4+". Unfortuneatly "+name+" could not find him/her, but did find a note!");
+System.out.println("The note read that "+noun5+" had "+verb6+" the " +noun4+ "Setting out to find the "+noun5+" again." );
+System.out.println("Finally finding the monster, "+name+" fought him with his/her"+weapon1+" In his armor made of"+material1+"!");
+System.out.println("After defeating the evil "+noun5+" "+name+" went back to town and had a massive celebration with the other "+noun1plural+" And then he/she was awesome and lived happily ever after and stuff.");
+}
+}
+
+
+
+
