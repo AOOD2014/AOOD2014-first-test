@@ -1,0 +1,49 @@
+
+public class Recursion {
+
+	public Recursion () {
+		
+	}
+	
+	public int f1(int x){
+		if (x>=7)
+			return f1(x-2) +3 ; 
+		else 
+			return x-5 ; 
+	}//End of f1 method
+	public int f2(int x){
+		if (x % 2 == 0 )
+			return f2(x/2) + 1 ; 
+		if (x % 3 == 0)
+			return f2(x/3) - 3 ; 
+		else 
+			return x+5 ; 
+	}//End of f2 method
+	public int f3(int x, int y){
+		if  (x > y)
+			return f3(x -1 , y +2) + 1; 
+		else
+			return (x -y); 
+		
+	}//End of f3 method
+	
+	public int f4( int x, int y ){
+		if (x < y)
+			return f4(x + 1 , y -2 ) + 1 ; 
+		if (x > y)
+			return ( 3 * x + 4* y);
+		else 
+			return 2 * f4 ( x + 2 , y -2 ) ; 
+	}//End of f4 method
+	//End of Recursion Class
+	public int fib (int n){
+		if ( n > 1)
+			return fib( n - 2) + fib( n -1); 
+		else
+			if (n == 1 )
+			 return (1); 
+			else 
+		return 0 ; 
+	}
+	}//End of fib method 
+//The recursion class gives the functions and domains that the values are entered in.
