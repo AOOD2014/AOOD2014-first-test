@@ -1,0 +1,226 @@
+import java.util.Scanner;
+public class Methods 
+{
+	public static void main(String[] args)
+	{
+		int num1=0, num2=0;
+		boolean test = true;
+		while(test==true)
+		{
+			System.out.println("Enter a choice:");
+			System.out.println("one to print 1");
+			System.out.println("+ to add your integers");
+			System.out.println("> to print the greatest integer");
+			System.out.println("2 for your number to be changed into a double");
+			System.out.println("3 to show if the strings are equal");
+			System.out.println("4 to show if the strings refer to the same object");
+			System.out.println("5 if you want a string with the same value to be printed");
+			System.out.println("6 for Hello world to be printed");
+			System.out.println("X to exit");
+	
+			Scanner in= new Scanner(System.in);
+			String menuChoice = in.nextLine();
+			
+			if(menuChoice.equals("one"))
+			{
+				System.out.println(one());
+			}
+			else if (menuChoice.equals("+"))
+			{
+				System.out.println("Enter the first number:");
+				while (in.hasNextInt()== false)
+				{
+					System.out.println("Try again");
+					in.next();
+				}
+				
+				num1 = in.nextInt();
+				System.out.println("Enter the second number:");
+				while (in.hasNextInt()== false)
+				{
+					System.out.println("Try again");
+					in.next();
+				}
+				
+				num2 = in.nextInt();
+				int addition = add(num1, num2);
+				System.out.println(addition);
+			}
+			else if(menuChoice.equals(">"))
+			{
+				System.out.println("Enter the first number:");
+				while (in.hasNextInt()== false)
+				{
+					System.out.println("Try again");
+					in.next();
+				}
+				
+				num1 = in.nextInt();
+				System.out.println("Enter the second number:");
+				while (in.hasNextInt()== false)
+				{
+					System.out.println("Try again");
+					in.next();
+				}
+				
+				num2 = in.nextInt();
+				int greater = greaterValue(num1, num2);
+				System.out.println(greater);
+			}
+			else if(menuChoice.equals("2"))
+			{
+				System.out.println("Enter the number:");
+				while (in.hasNextInt()== false)
+				{
+					System.out.println("Try again");
+					in.next();
+				}
+				
+				num1 = in.nextInt();
+				double number = toDouble(num1);
+				System.out.println(number);
+			}
+			else if(menuChoice.equals("3"))
+			{
+				System.out.println("Enter the first string:");
+				while (in.hasNextLine()== false)
+				{
+					System.out.println("Try again");
+					in.next();
+				}
+				
+				String word1 = in.nextLine();
+				System.out.println("Enter the second string:");
+				while (in.hasNextLine()== false)
+				{
+					System.out.println("Try again");
+					in.next();
+				}
+				
+				String word2 = in.nextLine();
+				boolean answer = equivalent(word1, word2);
+				System.out.println(answer);
+			}
+			else if(menuChoice.equals("4"))
+			{
+				System.out.println("Enter the first string:");
+				while (in.hasNextLine()== false)
+				{
+					System.out.println("Try again");
+					in.next();
+				}
+				
+				String word1 = in.nextLine();
+				System.out.println("Enter the second string:");
+				while (in.hasNextLine()== false)
+				{
+					System.out.println("Try again");
+					in.next();
+				}
+				
+				String word2 = in.nextLine();
+				boolean answer = sameObject(word1, word2);
+				System.out.println(answer);
+			}
+			else if(menuChoice.equals("5"))
+			{
+				System.out.println("Enter the first string:");
+				while (in.hasNextLine()== false)
+				{
+					System.out.println("Try again");
+					in.next();
+				}
+				
+				String word1 = in.nextLine();
+				String answer = duplicateString(word1);
+				System.out.println(answer);
+			}
+			else if(menuChoice.equals("6"))
+			{
+				printHelloWorld();
+			}
+			else if(menuChoice.equals("X") || menuChoice.equals("x"))
+			{
+				System.out.println("Have a wonderful day.");
+				break;
+			}
+			else
+			{
+				System.out.println("Please enter one of the choices above.");
+			}
+		}
+	}
+	
+	public static int one()
+	{
+		return 1;
+	}
+	
+	public static int add(int first, int second)
+	{
+		return first+second;
+	}
+	
+	public static int greaterValue(int first, int second)
+	{
+		if (first > second)
+		{
+			return first;
+		}
+		else if (second > first)
+		{
+			return second;
+		}
+		else
+		{
+			return first=second;
+		}
+		
+		
+	}
+	
+	public static double toDouble(double num)
+	{
+		return (double)num;
+		
+	}
+	
+	public static boolean equivalent(String inword1, String inword2)
+	{
+		if(inword1.equals(inword2))
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+		
+	}
+	
+	public static boolean sameObject(String phrase1, String phrase2)
+	{
+		if(phrase1.equals(phrase2))
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+	
+	public static String duplicateString(String string1)
+	{
+		String string;
+		string = string1;
+		return "The string " + string1 + " is equal to the string " + string;
+		
+	}
+	
+	public static void printHelloWorld()
+	{
+		System.out.println("Hello, world!");
+	}
+
+}
